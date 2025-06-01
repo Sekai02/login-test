@@ -63,8 +63,11 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 # Configuración de DRF
 REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',  # Todas las vistas protegidas por defecto
+    ],
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
+        'rest_framework_simplejwt.authentication.JWTAuthentication', # Autenticación JWT
     )
 }
 
