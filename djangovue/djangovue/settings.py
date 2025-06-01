@@ -61,13 +61,13 @@ MIDDLEWARE = [
 ]"""
 CORS_ALLOW_ALL_ORIGINS = True
 
-# Configuración de DRF
+# Configuration of DRF
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticated',  # Todas las vistas protegidas por defecto
+        'rest_framework.permissions.IsAuthenticated',  # All views protected by default
     ],
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_simplejwt.authentication.JWTAuthentication', # Autenticación JWT
+        'rest_framework_simplejwt.authentication.JWTAuthentication', # Autentication by JWT
     )
 }
 
