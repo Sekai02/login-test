@@ -1,9 +1,12 @@
-#from django.shortcuts import render
+from django.http import HttpResponse
 from rest_framework.views import APIView
 from rest_framework import response,status
 from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework.permissions import IsAuthenticated
 from .serializers import LoginSerializers,RegisterSerializers
+
+def home(request):
+    return HttpResponse("Welcome to the Django Vue Authentication Module")
 
 class RegisterView(APIView):
     permission_classes = []
